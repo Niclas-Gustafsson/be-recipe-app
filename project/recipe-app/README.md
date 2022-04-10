@@ -51,11 +51,6 @@ DB_PASSWORD=
 11. Go back to your IDE and attach a new shell to the php docker image and navigate to recipe-app (cd recipe-app)
 12. Run the command: ```php artisan migrate``` to create the tables.
 
-```bash
-  npm install my-project
-  cd my-project
-```
-
 ## API Reference
 
 ### Authentication & Authorization
