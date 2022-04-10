@@ -1,4 +1,61 @@
 
+# u06 Recipe App Backend
+
+## Description
+
+A RESTful API built with Laravel which should handle users and their recipe lists. The API should then be consumed by a frontend application built with Angular, to handle user login/ logout and CRUD for user lists.
+
+## API requirements
+- Same requirements as for the frontend application
+- A user should be able to register an account with the API (register, login, and logout.)
+- Make use of laravel’s Sanctum for authorization and authentication.
+- A logged in user should be able to create lists
+- The list should have a title
+- The list should be able to display the recipes saved to specific lists.
+- The user should be able to add lists, load lists and updating lists
+- A recipe can only be uniquely added to a list, but occur in different lists.
+- Recipe data should still be fetched from the external API.
+
+
+
+
+
+
+## Installation
+
+To run this project locally you need:
+- Docker
+- Of course an IDE and browser
+- Docker extension
+- Docker registry explorer (to easily attach shells, works fine with the terminal as well)
+
+### Steps
+1. Download this Github repository
+2. Open the project folder be-recipe-app in your IDE
+3. Inside project/recipe-app, duplicate the .env.example file and rename the duplicate .env
+4. Replace the DB variables in .env to these:
+```bash
+DB_CONNECTION=mysql
+DB_HOST=db
+DB_PORT=3306
+DB_DATABASE=CREATE_A_DATABASE_NAME
+DB_USERNAME=root
+DB_PASSWORD=
+```
+5. Navigate to the project folder at project/recipe-app and run the command: ```composer install``` in an integrated terminal to install all the required vendor files.
+6. Attach a shell to the php image, either through the terminal or Docker Registry Explorer plugin
+7. In the attached shell, navigate to the recipe-app folder with the command ```cd recipe-app```
+8. Run the command: ```php artisan serve --host 0.0.0.0 --port 8000``` to start the server
+9. Go to 0.0.0.0:8000 in your browser and log in with the credentials in your .env file
+10. Create a new database with the name you chose for DB_DATABASE in the .env file
+11. Go back to your IDE and attach a new shell to the php docker image and navigate to recipe-app (cd recipe-app)
+12. Run the command: ```php artisan migrate``` to create the tables.
+
+```bash
+  npm install my-project
+  cd my-project
+```
+
 ## API Reference
 
 ### Authentication & Authorization
