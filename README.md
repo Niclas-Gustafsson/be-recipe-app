@@ -16,11 +16,6 @@ A RESTful API built with Laravel which should handle users and their recipe list
 - A recipe can only be uniquely added to a list, but occur in different lists.
 - Recipe data should still be fetched from the external API.
 
-
-
-
-
-
 ## Installation
 
 To run this project locally you need:
@@ -50,11 +45,6 @@ DB_PASSWORD=
 10. Create a new database with the name you chose for DB_DATABASE in the .env file
 11. Go back to your IDE and attach a new shell to the php docker image and navigate to recipe-app (cd recipe-app)
 12. Run the command: ```php artisan migrate``` to create the tables.
-
-```bash
-  npm install my-project
-  cd my-project
-```
 
 ## API Reference
 
@@ -130,6 +120,6 @@ Code: 200
 		"created_at": "2022-04-08T14:28:40.000000Z",
 		"updated_at": "2022-04-08T14:28:40.000000Z"
 	},
-	"message": "List created"
+	"message": "Recipe added"
 }
 ```
